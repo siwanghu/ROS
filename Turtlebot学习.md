@@ -74,6 +74,36 @@
 >  
 > **启动跟随脚本**  
 > roslaunch turtlebot_follower follower.launch  
+# Turtlebot建图导航  
+## 创建地图 
+>  
+> **启动Turtlebot** *roslaunch turtlebot_bringup minimal.launch*  
+>   
+> **创建地图** *roslaunch turtlebot_navigation gmapping_demo.launch*  
+>  
+> **打开rviz** *roslaunch turtlebot_rviz_launchers view_navigation.launch*  
+>  
+> **手动扫描建图** *roslaunch turtlebot_teleop keyboard_teleop.launch*  
+>  
+> **保存地图** *rosrun map_server map_saver -f /tmp/my_map*  
+## 自主导航  
+> **启动Turtlebot** *roslaunch turtlebot_bringup minimal.launch*  
+>  
+> **启动导航模块** *roslaunch turtlebot_navigation amcl_demo.launch map_file:=/tmp/my_map.yaml*  
+>  
+> 导航模块有时启动失败可以使用这种方式启动(**非常重要**)  
+> export TURTLEBOT_MAP_FILE=～/tmp/my_map.yaml  
+> roslaunch turtlebot_navigation amcl_demo.launch  
+>  
+> **打开rviz** *roslaunch turtlebot_rviz_launchers view_navigation.launch --screen*  
+>  
+> **当启动之后，TurtleBot并不知道自己在哪个位置,需要给它提供它在地图上的位置：**  
+> + 点击rviz中的”2D Pose Estimate”按钮
+> + 在地图上标出TurtleBot的近似位置，并指出TurtleBot的朝向（TurtleBot的正运动方向)  
+> + 点击rviz上的”2D Nav Goal”按钮  
+> + 在地图上标出TurtleBot的导航目标，并且指出其在导航终点的朝向
+
+
 
 
 
