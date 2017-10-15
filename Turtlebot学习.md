@@ -101,7 +101,38 @@
 > + 点击rviz中的”2D Pose Estimate”按钮
 > + 在地图上标出TurtleBot的近似位置，并指出TurtleBot的朝向（TurtleBot的正运动方向)  
 > + 点击rviz上的”2D Nav Goal”按钮  
-> + 在地图上标出TurtleBot的导航目标，并且指出其在导航终点的朝向
+> + 在地图上标出TurtleBot的导航目标，并且指出其在导航终点的朝向  
+# 网络配置  
+> 主机也需要和笔记本一样安装ROS和Turtlebot包(**参考上面ROS与Turtlebot包安装过程**)  
+>  
+> 主机与笔记本需要同步时钟，在主机与笔记本上都需要安装chrony(**非常重要**)  
+> sudo apt-get install chrony  
+> sudo ntpdate ntp.ubuntu.com  
+>  
+> 在主机和笔记本电脑上都需要安装ssh-server  
+> sudo apt-get install openssh-server  
+>  
+> 在笔记本电脑端配置  
+> echo export ROS_MASTER_URI=http://localhost:11311 >> ~/.bashrc  
+> echo export ROS_HOSTNAME=**笔记本电脑IP地址** >> ~/.bashrc  
+>  
+> 在主机端配置  
+> echo export ROS_MASTER_URI=http://**笔记本电脑IP地址**:11311 >> ~/.bashrc  
+> echo export ROS_HOSTNAME=**主机IP地址** >> ~/.bashrc  
+## 网络测试  
+> 主机开启一个终端使用ssh命令登陆笔记本电脑  
+> ssh username@ip  
+> 运行roscore  
+>  
+> 主机在开启一个终端使用ssh命令登陆笔记本电脑  
+> ssh username@ip  
+> 运行roslaunch turtlebot_bringup minimal.launch  
+>  
+> 在主机开启一个终端  
+> 运行roslaunch turtlebot_teleop keyboard_teleop.launch  
+> 如果在主机端可以操作Turtlebot,说明网络配置成功  
+
+
 
 
 
