@@ -131,6 +131,10 @@
 > 在主机开启一个终端  
 > 运行roslaunch turtlebot_teleop keyboard_teleop.launch  
 > 如果在主机端可以操作Turtlebot,说明网络配置成功  
+# ROS常用命令  
+> 实时查看机器人坐标位置  
+> rosrun tf tf_echo /map /base_link
+
 # ROS工作原理  
 > ##  **ROS节点**  
 > 使用命令**rosnode**查看Turtlebot运行启动时运行的ROS结点  
