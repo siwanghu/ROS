@@ -4,6 +4,7 @@
 import rospy
 import move
 import threading
+import config
 from socket import *
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 import actionlib
@@ -47,8 +48,9 @@ threading.Thread(target = Monitor_thread,name="Monitor").start()
 while True:
 	while(run):
 		try:
-			position = {'x': 2.522, 'y' : 3.768}
-			quaternion = {'r1' : 0.000, 'r2' : 0.000, 'r3' : -0.791, 'r4' : 0.612}
+			place=config.getCruiseEnd()
+			position = place[0]
+			quaternion = place[1]
 			rospy.loginfo("Go to (%s, %s) pose", position['x'], position['y'])
 			success = navigator.goto(position, quaternion)
 		
@@ -57,9 +59,9 @@ while True:
 			else:
 				rospy.loginfo("The base failed to reach the desired pose")
 
-
-			position = {'x':2.351 , 'y' : -0.442}
-			quaternion = {'r1' : 0.000, 'r2' : 0.000, 'r3' : 0.761, 'r4' : 0.648}
+			place=config.getCruiseBegin()
+			position = place[0]
+			quaternion = place[1]
 			rospy.loginfo("Go to (%s, %s) pose", position['x'], position['y'])
 			success = navigator.goto(position, quaternion)
 
