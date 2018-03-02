@@ -19,7 +19,7 @@
         <r4>0.612</r4>
     </end>
 
-    <place type="出口">
+    <place type="door">
         <x>4.067</x>
         <y>-0.713</y>
         <z>0.010</z>
@@ -29,7 +29,7 @@
         <r4>-0.125</r4>
     </place>
     
-    <place type="柜台">
+    <place type="counter">
         <x>1.060</x>
         <y>-0.386</y>
         <z>0.010</z>
@@ -39,7 +39,7 @@
         <r4>0.994</r4>
     </place>
 
-    <place type="取款机">
+    <place type="atm">
         <x>2.467</x>
         <y>5.274</y>
         <z>0.010</z>

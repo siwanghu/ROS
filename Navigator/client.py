@@ -4,10 +4,10 @@
 import sys
 from socket import *
 
-host="localhost"
-port=9999
+host=sys.argv[1]
+port=int(sys.argv[2])
 addr=(host,port)
-com=sys.argv[1]
+com=sys.argv[3]
 
 tcpClient = socket(AF_INET,SOCK_STREAM)
 tcpClient.connect(addr)
