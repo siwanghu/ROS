@@ -33,7 +33,8 @@ def Monitor_thread():
 		
 		data=tcpClient.recv(1024)
 		if not data:
-			break
+			tcpClient.close()
+			continue
 		else:
 			if data == "door":
 				run=1

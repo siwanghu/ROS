@@ -32,7 +32,8 @@ def Monitor_thread():
 		print("connected from:",addr)
 		data=tcpClient.recv(1024)
 		if not data:
-			break
+			tcpClient.close()
+			continue
 		else:
 			if data == "run":
 				run=True
