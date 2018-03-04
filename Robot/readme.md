@@ -8,7 +8,7 @@
 >  
 > **打开RVIZ设置底盘初始位置** roslaunch turtlebot_rviz_launchers view_navigation.launch --screen  
 # 下位机程序启动流程  
-> **启动巡航脚步** python cruise.py  
+> **启动巡航脚本** python cruise.py  
 >  
 > **启动导航脚本** python navigator.py  
 >  
