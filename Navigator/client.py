@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 #encoding=utf-8
+#coding: siwanghu
 
 import sys
 from socket import *

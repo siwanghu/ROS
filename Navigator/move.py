@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 #encoding=utf-8
+#coding: siwanghu
 
 import rospy
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal

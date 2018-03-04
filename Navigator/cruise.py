@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 #encoding=utf-8
+#coding: siwanghu
 
 import rospy
 import move
 import threading
 import config
+import sys
 from socket import *
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 import actionlib
@@ -22,6 +24,7 @@ def Monitor_thread():
 	port=9999
 	addr=(host,port)
 
+	setdefaulttimeout(sys.maxint)
 	tcpServer = socket(AF_INET,SOCK_STREAM)
 	tcpServer.bind(addr)
 	tcpServer.listen(10)

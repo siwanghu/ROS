@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 #encoding=utf-8
+#coding: siwanghu
 
 from xml.dom.minidom import parse
 import xml.dom.minidom
