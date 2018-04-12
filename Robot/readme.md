@@ -1,7 +1,8 @@
 ### 下位机程序使用说明 create by siwanghu v1.0 
 # 安装Web.py模块 
-> 解压**Webweb.py-0.33.tar.gz**  
-> linux上使用sudo python setup.py install命令安装web.py模块  
+> 解压**web.py-0.33.tar.gz**压缩文件  
+> 进入解压文件setup.py所在目录  
+> 使用**sudo python setup.py install**命令安装web.py模块  
 
 # ROS启动流程  
 > **启动ROS** roscore  
