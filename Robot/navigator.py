@@ -20,7 +20,7 @@ navigator = move.Move()
 def Monitor_thread():
 	global run
 	global navigator
-	host="localhost"
+	host="192.168.0.212"
 	port=10000
 	addr=(host,port)
 

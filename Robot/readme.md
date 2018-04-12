@@ -1,4 +1,8 @@
-### 下位机程序使用说明 create by siwanghu v1.0  
+### 下位机程序使用说明 create by siwanghu v1.0 
+# 安装Web.py模块 
+> 解压**Webweb.py-0.33.tar.gz**  
+> linux上使用sudo python setup.py install命令安装web.py模块  
+
 # ROS启动流程  
 > **启动ROS** roscore  
 >  
@@ -11,6 +15,8 @@
 > **启动巡航脚本** python cruise.py  
 >  
 > **启动导航脚本** python navigator.py  
+>  
+> **启动Web服务器脚本** python myWeb.py  
 >  
 > **启动图形化测试界面** python exec.py  
 # 上位机与下位机命令交换格式  
